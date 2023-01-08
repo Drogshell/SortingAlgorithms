@@ -1,17 +1,22 @@
-public class BubbleSort {
+public class SelectionSort {
 
     /*
-    One of the least efficient algorithm, it's very slow.
-    Big O complexity: O(n^2)
-    Bubble Sort is a stable algorithm
+    In place algorithm
+    Big O Complexity: O(n^2)
+    Unstable algorithm
      */
+
     public static void Sort(int[] array) {
         for (int lastUnsortedIndex = array.length - 1; lastUnsortedIndex > 0; lastUnsortedIndex--) {
-            for (int i = 0; i < lastUnsortedIndex; i++) {
-                if (array[i] > array[i + 1]) {
-                    swap(array, i, i + 1);
+            int largest = 0;
+
+            for (int i = 1; i <= lastUnsortedIndex; i++) {
+                if (array[i] > array[largest]) {
+                    largest = i;
                 }
             }
+
+            swap(array, largest, lastUnsortedIndex);
         }
     }
 
