@@ -6,7 +6,7 @@ public class Main {
             System.out.print(array[i] + ",");
         }
 
-        MergeSort.Sort(array, 0, array.length);
+        QuickSort.Sort(array, 0, array.length);
 
         System.out.println("\n-Sorted-");
 
