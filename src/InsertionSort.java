@@ -21,4 +21,25 @@ public class InsertionSort {
         }
     }
 
+
+    //Sorting recursively is not only dangerous, you run the risk of stack overflow, it's also slower than sorting using a for loop.
+    public static void SortRecursively(int[] array, int numberOfItems) {
+
+        if (numberOfItems < 2) {
+            return;
+        }
+
+        SortRecursively(array, numberOfItems - 1);
+
+        int newElement = array[numberOfItems - 1];
+
+        int i;
+
+        for (i = numberOfItems - 1; i > 0 && array[i - 1] > newElement; i--) {
+            array[i] = array[i - 1];
+        }
+
+        array[i] = newElement;
+    }
+
 }

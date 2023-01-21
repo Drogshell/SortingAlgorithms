@@ -6,9 +6,10 @@ public class QuickSort {
      */
 
     public static void Sort(int[] input, int start, int end) {
-        if (end - start < 2) {
-            return;
-        }
+
+        if (input.length == 0) return;
+
+        if (end - start < 2) return;
 
         int pivotIndex = partition(input, start, end);
         Sort(input, start, pivotIndex);
