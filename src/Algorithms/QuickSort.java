@@ -1,3 +1,5 @@
+package Algorithms;
+
 public class QuickSort {
     /*
     In place algorithm

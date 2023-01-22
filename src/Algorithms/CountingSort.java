@@ -1,3 +1,5 @@
+package Algorithms;
+
 public class CountingSort {
     /*
     Not an in place algorithm

@@ -1,3 +1,5 @@
+package Algorithms;
+
 public class Recursion {
 
     public static int Recurse(int num) {
